@@ -34,6 +34,7 @@ body{
     box-shadow: 0 0 30px 10px grey;
     margin-bottom: 30px;
     border: solid rgb(211, 211, 211) 5px;
+    object-fit: cover;
 }
 
 .avaSection p{
@@ -90,9 +91,9 @@ body{
 
 @media screen and (min-width: 900px) {
     body{
-        background-size: 60%;
+        background-size: 30%;
         display: grid;
-        grid-template-columns: 1fr 1.2fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .avaSection{
