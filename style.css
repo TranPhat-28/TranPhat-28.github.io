@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 *{
     box-sizing: border-box;
@@ -9,11 +9,122 @@
 body{
     background-color: rgb(7, 0, 17);
     background-image: url("double-bubble-outline.png");
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: Poppins;
 }
 
+.avaSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 90vh;
+    margin-top: 0px;
+}
 
-@media screen and (max-width: 1000px) {
+.avaSection img{
+    width: 50%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    box-shadow: 0 0 30px 10px grey;
+    margin-bottom: 30px;
+    border: solid rgb(211, 211, 211) 5px;
+}
+
+.avaSection p{
+    width: 80%;
+    text-align: center;
+}
+
+.optionSection {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.optionSection .box{
+    width: 80%;
+    height: 20%;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 20px 20px 15px -10px grey;
+    border-radius: 0 0 50px 0;
+    padding: 10px;
+
+    transition: transform 0.4s ease;
+    transform: translateX(-400%);
+}
+
+.optionSection .box .circle{
+    height: 80%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: hotpink;
+    border: solid 5px pink;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.optionSection .box span{
+    font-weight: 700;
+}
+
+.optionSection .box p{
+    font-size: 0.8em;
+}
+
+.optionSection .box.show {
+    transform: translateX(0);
+}
+
+@media screen and (min-width: 900px) {
     body{
-        background-size: 60%;        
+        background-size: 60%;
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+    }
+
+    .avaSection{
+        height: 100vh;
+    }
+
+    .optionSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .optionSection .box{
+        width: 80%;
+        height: 20%;
+        margin: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        box-shadow: none;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: ease-in .2s;
+    }
+
+    .optionSection .middleBox{
+        margin-left: 100px;
+    }
+
+    .optionSection .box:hover{
+        box-shadow: 0 0 10px rgb(255, 159, 175), 0 0 40px rgb(255, 159, 175), 0 0 80px rgb(255, 159, 175);
     }
 }
