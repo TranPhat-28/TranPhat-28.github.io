@@ -19,7 +19,6 @@ body{
 }
 
 .firstSection{
-    background-color: bisque;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,7 +26,6 @@ body{
 }
 
 .secondSection{
-    background-color:rgb(153, 217, 253);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,6 +64,44 @@ h2{
     align-items: center;
 }
 
+a{
+    text-decoration: none;
+    font-weight: 600;
+    background-color: grey;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+    color: white;
+}
+
+.activeColor{
+    color: gold;
+}
+
+.active1{
+    transition-delay: 0.5s;
+}
+
+.active2{
+    transition-delay: 1s;
+}
+
+.active3{
+    transition-delay: 1.5s;
+}
+
+.active4{
+    transition-delay: 2s;
+}
+
+.active5{
+    transition-delay: 2.5s;
+}
+
+.active1, .active2, .active3, .active4, .active5{
+    transition-duration: 0.5s;
+}
+
 @media screen and (min-width: 540px) {
     .box .circle{
         width: 18%;
@@ -75,19 +111,35 @@ h2{
 @media screen and (min-width: 900px) {
     body{
         background-size: 30%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-direction: row;
     }
 
     .firstSection, .secondSection{
         height: 100vh;
+        width: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: ease-out 1s;
     }
 
     .box{
         display: none;
+        width: 40%;
+        padding: 2px;
+        margin-bottom: 10px;
+    }
+
+    a{
+        display: none;
+        margin-top: 20px;
+        cursor: pointer;
+        transition-duration: .2s;
+    }
+
+    a:hover{
+        background-color: hotpink;
     }
     
     h2{
@@ -99,10 +151,13 @@ h2{
         border-radius: 50px;
         cursor: pointer;
         transition: ease-in .2s;
+        margin: 10px 0px 10px 0px;
     }
 
     h2:hover{
         color: red;
         box-shadow: 0 0 10px rgb(255, 159, 175), 0 0 40px rgb(255, 159, 175), 0 0 80px rgb(255, 159, 175);
     }
+
+
 }
