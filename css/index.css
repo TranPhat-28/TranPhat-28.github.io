@@ -27,14 +27,17 @@ body{
     margin-top: 0px;
 }
 
-.avaSection img{
+.avaSection .avaContainer{
     width: 50%;
     aspect-ratio: 1;
     border-radius: 50%;
     box-shadow: 0 0 30px 10px grey;
     margin-bottom: 30px;
     border: solid rgb(211, 211, 211) 5px;
-    object-fit: cover;
+    background-color: black;
+    background-image: url(../media/img1.jpg);
+    background-size: cover;
+    transition: linear .5s;
 }
 
 .avaSection p{

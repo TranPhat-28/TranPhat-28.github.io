@@ -1,4 +1,9 @@
 const boxes = document.querySelectorAll('.box')
+const avaBox = document.getElementById('avaTag');
+
+const link = ['url("media/img1.jpg")', 'url("media/img2.jpg")', 'url("media/img3.jpg")'];
+
+var count = 0;
 
 window.addEventListener('scroll', checkBoxes)
 
@@ -19,3 +24,14 @@ function checkBoxes() {
         }
     })
 }
+
+window.addEventListener('DOMContentLoaded', function() {
+    setInterval(() => {
+        if (count >= link.length)
+        {
+            count = 0;
+        }
+        avaBox.style.backgroundImage=link[count];
+        count += 1;
+    }, 4000);
+});
