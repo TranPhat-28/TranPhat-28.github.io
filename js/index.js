@@ -33,5 +33,5 @@ window.addEventListener('DOMContentLoaded', function() {
         }
         avaBox.style.backgroundImage=link[count];
         count += 1;
-    }, 4000);
+    }, 2000);
 });
