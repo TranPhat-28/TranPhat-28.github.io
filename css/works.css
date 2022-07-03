@@ -15,3 +15,7 @@ body {
 .carousel-control-prev /*, .carousel-indicators */ {
     filter: invert(100%);
 }
+
+.carousel-indicators button {
+    filter: invert(100%);
+}
