@@ -19,3 +19,18 @@ body {
 .carousel-indicators button {
     filter: invert(100%);
 }
+
+a{
+    text-decoration: none;
+    font-weight: 600;
+    background-color: grey;
+    padding: 10px 40px;
+    border-radius: 30px;
+    color: white;
+    transition-duration: .2s;
+}
+
+a:hover{
+    background-color: hotpink;
+    color: white;
+}
